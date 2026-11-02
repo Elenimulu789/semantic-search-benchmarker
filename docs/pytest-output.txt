@@ -1,0 +1,40 @@
+============================= test session starts ==============================
+platform linux -- Python 3.11.17, pytest-9.2.0, pluggy-1.7.0 -- /workspace/scratch/f2a8103e2218/semantic-search-benchmarker/.venv/bin/python
+cachedir: .pytest_cache
+rootdir: /workspace/scratch/f2a8103e2218/semantic-search-benchmarker
+configfile: pyproject.toml
+testpaths: tests
+plugins: anyio-4.16.0
+collecting ... collected 28 items
+
+tests/test_app.py::test_dashboard_loads_without_downloading_a_model PASSED [  3%]
+tests/test_app.py::test_dashboard_build_and_real_search PASSED           [  7%]
+tests/test_benchmarks.py::test_known_ranking_math PASSED                 [ 10%]
+tests/test_benchmarks.py::test_missed_query_is_zero_and_top_k_is_enforced PASSED [ 14%]
+tests/test_benchmarks.py::test_duplicate_overlapping_hits_do_not_inflate_recall PASSED [ 17%]
+tests/test_benchmarks.py::test_multiple_evidence_units_are_counted_once PASSED [ 21%]
+tests/test_benchmarks.py::test_invalid_metric_inputs[relevant0-3] PASSED [ 25%]
+tests/test_benchmarks.py::test_invalid_metric_inputs[relevant1-0] PASSED [ 28%]
+tests/test_benchmarks.py::test_all_labels_are_valid_and_covered_under_every_chunk_strategy PASSED [ 32%]
+tests/test_benchmarks.py::test_source_snapshot_matches_recorded_checksums PASSED [ 35%]
+tests/test_chunking.py::test_invalid_token_windows[0-0] PASSED           [ 39%]
+tests/test_chunking.py::test_invalid_token_windows[5-5] PASSED           [ 42%]
+tests/test_chunking.py::test_invalid_token_windows[5--1] PASSED          [ 46%]
+tests/test_chunking.py::test_exact_overlap_and_no_original_token_drops PASSED [ 50%]
+tests/test_chunking.py::test_unicode_boundaries_do_not_corrupt_content PASSED [ 53%]
+tests/test_chunking.py::test_structure_preserves_fences_and_ignores_code_headings PASSED [ 57%]
+tests/test_chunking.py::test_fixed_windows_expose_code_slicing_as_a_baseline_limitation PASSED [ 60%]
+tests/test_chunking.py::test_empty_and_repeated_headers PASSED           [ 64%]
+tests/test_retrieval.py::test_exact_rare_identifier_is_rank_one_case_insensitive PASSED [ 67%]
+tests/test_retrieval.py::test_zero_keyword_overlap_returns_no_bm25_hits PASSED [ 71%]
+tests/test_retrieval.py::test_cosine_normalization_and_descending_ranking PASSED [ 75%]
+tests/test_retrieval.py::test_dense_ties_are_stably_ordered_by_chunk_id PASSED [ 78%]
+tests/test_retrieval.py::test_invalid_vectors_are_rejected[values0] PASSED [ 82%]
+tests/test_retrieval.py::test_invalid_vectors_are_rejected[values1] PASSED [ 85%]
+tests/test_retrieval.py::test_invalid_vectors_are_rejected[values2] PASSED [ 89%]
+tests/test_retrieval.py::test_ingestion_does_not_read_evaluation_data PASSED [ 92%]
+tests/test_retrieval.py::test_real_dense_paraphrase_with_zero_exact_keyword_overlap PASSED [ 96%]
+tests/test_retrieval.py::test_model_windows_include_the_entire_long_input PASSED [100%]
+
+- generated xml file: /workspace/scratch/f2a8103e2218/semantic-search-benchmarker/docs/pytest-results.xml -
+============================== 28 passed in 5.81s ==============================

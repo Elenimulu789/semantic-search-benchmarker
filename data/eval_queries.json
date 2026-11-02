@@ -1,0 +1,324 @@
+[
+  {
+    "query_id": "e01",
+    "query": "What does response_model_exclude_unset do?",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/response-model.md",
+        "quote": "return only the values explicitly set",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e02",
+    "query": "Header convert_underscores False",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/header-params.md",
+        "quote": "disable automatic conversion of underscores to hyphens",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e03",
+    "query": "CORSMiddleware allow_credentials default",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/cors.md",
+        "quote": "cookies should be supported for cross-origin requests",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e04",
+    "query": "CORS max_age default 600",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/cors.md",
+        "quote": "Defaults to `600`",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e05",
+    "query": "OAuth2PasswordBearer tokenUrl relative URL",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/security/first-steps.md",
+        "quote": "refers to a relative URL",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e06",
+    "query": "WebSocketDisconnect receive_text exception",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "advanced/websockets.md",
+        "quote": "When a WebSocket connection is closed",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e07",
+    "query": "UploadFile SpooledTemporaryFile object",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/request-files.md",
+        "quote": "It exposes an actual Python",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e08",
+    "query": "BackgroundTasks add_task arguments",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/background-tasks.md",
+        "quote": "`.add_task()` receives as arguments",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e09",
+    "query": "Path ge=1 item_id validation",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/path-params-numeric-validations.md",
+        "quote": "Here, with `ge=1`",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "e10",
+    "query": "status_code HTTPStatus IntEnum",
+    "kind": "exact",
+    "relevant": [
+      {
+        "doc": "tutorial/response-status-code.md",
+        "quote": "can alternatively also receive an `IntEnum`",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Exact identifier lookup."
+  },
+  {
+    "query_id": "c01",
+    "query": "How can I send an email after replying so the visitor does not have to wait?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/background-tasks.md",
+        "quote": "after* returning a response",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c02",
+    "query": "How can a browser website call a server running on a different port?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/cors.md",
+        "quote": "An origin is the combination of protocol",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c03",
+    "query": "How do I keep large uploaded attachments from exhausting RAM?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/request-files.md",
+        "quote": "It uses a \"spooled\" file",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c04",
+    "query": "How do I close my database session automatically when request handling finishes?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/dependencies/dependencies-with-yield.md",
+        "quote": "create a database session and close it after finishing",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c05",
+    "query": "How can I avoid leaking private fields in the data returned to a client?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/response-model.md",
+        "quote": "limit and filter** the output data",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c06",
+    "query": "How should a chat server handle a participant disconnecting?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "advanced/websockets.md",
+        "quote": "When a WebSocket connection is closed",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c07",
+    "query": "Where should I load a shared machine learning model once and release it when the service stops?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "advanced/events.md",
+        "quote": "database connection pool, or loading a shared machine learning model",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c08",
+    "query": "How do I reject a request and return an explanation when something is missing?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/handling-errors.md",
+        "quote": "you don't `return` it, you `raise` it",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c09",
+    "query": "How can I reuse common request validation across different routes?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/dependencies/index.md",
+        "quote": "shared logic",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c10",
+    "query": "How do I stop overly long text from being accepted as an input?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/query-params-str-validations.md",
+        "quote": "its length doesn't exceed 50 characters",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c11",
+    "query": "How can my application understand an object embedded inside another object?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/body-nested-models.md",
+        "quote": "nested models",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c12",
+    "query": "How can the browser obtain proof of identity and attach it to later requests?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/security/first-steps.md",
+        "quote": "The frontend stores that token temporarily somewhere",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c13",
+    "query": "How can I avoid buffering a large attachment and notify the user after replying?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/request-files.md",
+        "quote": "It uses a \"spooled\" file",
+        "occurrence": 0
+      },
+      {
+        "doc": "tutorial/background-tasks.md",
+        "quote": "after* returning a response",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  },
+  {
+    "query_id": "c14",
+    "query": "How can I clean up resources both for an individual request and when the application exits?",
+    "kind": "conceptual",
+    "relevant": [
+      {
+        "doc": "tutorial/dependencies/dependencies-with-yield.md",
+        "quote": "create a database session and close it after finishing",
+        "occurrence": 0
+      },
+      {
+        "doc": "advanced/events.md",
+        "quote": "database connection pool, or loading a shared machine learning model",
+        "occurrence": 0
+      }
+    ],
+    "rationale": "Natural-language intent; evidence selected from the source documentation before running retrieval."
+  }
+]

@@ -1,0 +1,32 @@
+name: Search QA
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  search-quality:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      HF_HUB_DISABLE_XET: "1"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install uv and locked dependencies
+        run: |
+          pip install uv==0.13.4
+          uv sync --frozen
+      - uses: actions/cache@v4
+        with:
+          path: .cache
+          key: search-model-${{ runner.os }}-${{ hashFiles('uv.lock', 'src/indexer.py') }}
+      - name: Run tests including real embeddings and dashboard
+        run: uv run --frozen pytest -v --junitxml=artifacts/pytest-results.xml
+      - name: Benchmark the curated development queries
+        run: uv run --frozen python scripts/run_benchmark.py --repeats 3
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: search-qa-evidence
+          path: artifacts/

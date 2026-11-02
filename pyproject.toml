@@ -1,0 +1,28 @@
+[project]
+name = "semantic-search-benchmarker"
+version = "0.1.0"
+description = "SearchWorkbench: compare BM25, dense retrieval, and chunking on technical documentation"
+requires-python = ">=3.11,<3.14"
+dependencies = [
+  "pydantic>=2.10,<3",
+  "fastembed>=0.7,<0.8",
+  "faiss-cpu>=1.10,<2",
+  "rank-bm25>=0.2.2,<0.3",
+  "tiktoken>=0.9,<1",
+  "numpy>=1.26,<3",
+  "pandas>=2.2,<3",
+  "streamlit>=1.44,<2",
+  "python-dotenv>=1,<2",
+  "httpx[socks]>=0.28,<0.29",
+]
+
+[dependency-groups]
+dev = ["pytest>=8.3,<10"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["integration: requires the real embedding model (downloads once)"]
+
+[tool.uv]
+package = false

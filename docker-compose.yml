@@ -1,0 +1,23 @@
+name: semantic-search-benchmarker
+services:
+  search:
+    build: .
+    ports: ["127.0.0.1:8501:8501"]
+    volumes:
+      - model-cache:/app/.cache
+      - benchmark-results:/app/artifacts
+    environment:
+      EMBEDDING_MODEL: sentence-transformers/all-MiniLM-L6-v2
+      # Disable the optional Xet download transport, not HTTPS certificate checks.
+      HF_HUB_DISABLE_XET: "1"
+    security_opt: [no-new-privileges:true]
+    cap_drop: [ALL]
+    healthcheck:
+      test: [CMD, python, -c, "import urllib.request; urllib.request.urlopen('http://127.0.0.1:8501/_stcore/health', timeout=3)"]
+      interval: 10s
+      timeout: 4s
+      retries: 5
+      start_period: 20s
+volumes:
+  model-cache:
+  benchmark-results:
